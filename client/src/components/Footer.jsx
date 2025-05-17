@@ -71,10 +71,10 @@ export default function Footer() {
               © 2024 Muskan Restaurant™. All Rights Reserved.
             </span>
             <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-              <a href="#" className="text-amber-100 hover:text-white transition-colors duration-300">
+              <a href="https://www.facebook.com/profile.php?id=100008418976294" className="text-amber-100 hover:text-white transition-colors duration-300">
                 <BsFacebook className="w-4 h-4" />
               </a>
-              <a href="#" className="text-amber-100 hover:text-white transition-colors duration-300">
+              <a href="https://www.instagram.com/pi_yushhhhh?igsh=MXc1bG15eGgybmFjOA==" className="text-amber-100 hover:text-white transition-colors duration-300">
                 <BsInstagram className="w-4 h-4" />
               </a>
               <a href="#" className="text-amber-100 hover:text-white transition-colors duration-300">

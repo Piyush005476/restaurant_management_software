@@ -52,37 +52,41 @@ export default function Header() {
     };
 
     return (
-        <header className="bg-gradient-to-r from-rose-900 via-yellow-900 to-rose-900 shadow-lg relative">
-            <div className="absolute inset-0 bg-black/40"></div>
+        <header className="bg-gradient-to-r from-blue-900 via-teal-800 to-blue-800 shadow-xl relative">
+            <div className="absolute inset-0 bg-black/15 backdrop-blur-[2px]"></div>
             <div className="relative z-10 flex items-center justify-between p-4 mx-auto max-w-7xl">
                 <Link to="/" className="flex items-center">
-                    <img src={logo} alt="logo" className="w-40 hover:opacity-90 transition-opacity" />
+                    <img 
+                        src={logo} 
+                        alt="logo" 
+                        className="w-40 hover:opacity-90 transition-all duration-300 transform hover:scale-105" 
+                    />
                 </Link>
 
                 <ul className="flex items-center gap-10">
                     <Link to="/">
-                        <li className="hidden sm:inline text-rose-100 hover:text-white transition-colors duration-300 relative group">
-                            <span>Home</span>
-                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-200 via-yellow-200 to-rose-200 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                        <li className="hidden sm:inline text-blue-100 hover:text-white transition-all duration-300 relative group">
+                            <span className="text-lg font-medium">Home</span>
+                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-200 via-teal-200 to-blue-200 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                         </li>
                     </Link>
                     <Link to="/about">
-                        <li className="hidden sm:inline text-rose-100 hover:text-white transition-colors duration-300 relative group">
-                            <span>About</span>
-                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-200 via-yellow-200 to-rose-200 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                        <li className="hidden sm:inline text-blue-100 hover:text-white transition-all duration-300 relative group">
+                            <span className="text-lg font-medium">About</span>
+                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-200 via-teal-200 to-blue-200 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                         </li>
                     </Link>
                     {!(currentUser?.role === "Manager" || currentUser?.isAdmin) && (
                         <Link to="/item">
-                            <li className="hidden sm:inline text-rose-100 hover:text-white transition-colors duration-300 relative group">
-                                <span>Menu</span>
-                                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-200 via-yellow-200 to-rose-200 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                            <li className="hidden sm:inline text-blue-100 hover:text-white transition-all duration-300 relative group">
+                                <span className="text-lg font-medium">Menu</span>
+                                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-200 via-teal-200 to-blue-200 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                             </li>
                         </Link>
                     )}
                 </ul>
 
-                <div className='flex gap-4'>
+                <div className='flex gap-4 items-center'>
                     {currentUser ? (
                         <Dropdown
                             arrowIcon={false}
@@ -93,9 +97,9 @@ export default function Header() {
                                         alt='user' 
                                         img={currentUser.profilePicture} 
                                         rounded 
-                                        className="ring-2 ring-rose-300/30 ring-offset-1 ring-offset-rose-900 group-hover:ring-rose-300/50 transition-all duration-300"
+                                        className="ring-2 ring-blue-300/30 ring-offset-1 ring-offset-blue-900 group-hover:ring-blue-300/50 transition-all duration-300"
                                     />
-                                    <span className="text-rose-100 group-hover:text-white transition-colors duration-300">
+                                    <span className="text-blue-100 group-hover:text-white transition-colors duration-300 font-medium">
                                         {currentUser.username}
                                     </span>
                                 </div>
@@ -113,7 +117,7 @@ export default function Header() {
                         </Dropdown>
                     ) : (
                         <Link to='/signin'>
-                            <button className='px-6 py-2 text-rose-100 border-2 border-rose-400/30 hover:border-rose-400 hover:text-white rounded-lg transition-all duration-300 bg-rose-900/40 hover:bg-rose-900/60'>
+                            <button className='px-6 py-2.5 text-blue-100 border-2 border-blue-400/30 hover:border-blue-400 hover:text-white rounded-lg transition-all duration-300 bg-blue-900/40 hover:bg-blue-900/60 transform hover:scale-105 font-medium'>
                                 Sign In
                             </button>
                         </Link>
